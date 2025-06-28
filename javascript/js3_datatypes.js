@@ -1,0 +1,9 @@
+/*
+number
+string
+boolean
+function
+object
+null
+defined/undefined
+*/
