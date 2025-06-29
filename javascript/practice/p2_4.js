@@ -3,7 +3,20 @@
 let a = 5;
 let b = 3;
 
-// swap -> using another vaiable, without other variable
+// using third variable
+/*
+let temp = a;
+a = b;
+b = temp;
+*/
+
+// without using third variable
+// a = a+b;
+// b = a-b;
+// a = a-b;
+a = a*b;
+b = a/b;
+a = a/b;
 
 console.log(a) // 3
 console.log(b) // 5
