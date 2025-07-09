@@ -11,14 +11,12 @@ Print Fibonacci series up to n terms.
 Check whether a number is a palindrome (e.g., 121, 1331).
 Count how many even and odd digits are present in a number.
 Calculate the sum of digits of a number until it becomes a single digit (digital root).
-Homework
-- Check whether a number is Armstrong (e.g., 153 = 1³+5³+3³).
 Print the sum of squares of digits of a number.
 Input a number and count how many times each digit (0–9) appears.
-Homework
-- Convert a decimal number to binary manually (no bin() function).
 Find the product of all digits in a number.
+
 Homework
-- Input a number and print whether it is a perfect number (sum of factors equals the number).
-Homework
+- Check whether a number is Armstrong (e.g., 153 = 1³+5³+3³).
+- Convert a decimal number to binary manually (no bin() function).
 - Check if a number is a strong number (sum of factorials of digits = original number).
+- Input a number and print whether it is a perfect number (sum of factors equals the number).
