@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1 id="heading">My App</h1>
+    <input id="fn" type="text" placeholder="Enter first number"/><br/>
+    <input id="sn" type="text" placeholder="Enter second number"/><br/>
+    <button onclick="add()">Add</button>
+    <button onclick="mul()">Mul</button>
+    <h2 id="result">-</h2>
+
+    <script>
+        document.getElementById("heading").innerText = "Caculator App"
+        function add(){
+            let x = parseInt(document.getElementById("fn").value);
+            let y = parseInt(document.getElementById("sn").value);
+
+            console.log(x+y);
+            if(isNaN(x) || isNaN(y)){
+            document.getElementById("result").innerText = "-";
+            } else {
+                document.getElementById("result").innerText = "Addition: "+(x+y);
+            }
+        }
+        
+        function mul(){
+            let x = parseInt(document.getElementById("fn").value);
+            let y = parseInt(document.getElementById("sn").value);
+
+            console.log(x-y);
+            if(isNaN(x) || isNaN(y)){
+            document.getElementById("result").innerText = "-";
+            } else {
+                document.getElementById("result").innerText = "Multiplication: "+(x*y);
+            }
+        }
+        
+    </script>
+</body>
+</html>
