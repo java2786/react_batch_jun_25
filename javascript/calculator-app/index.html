@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculator App</h1>
+    <h3 id="output"></h3>
+
+    <button onclick="clearOutput()">Clear</button><br />
+    <button onclick="readValue(7)">7</button><button onclick="readValue(8)">8</button><button
+        onclick="readValue(9)">9</button><button onclick="readValue('+')">+</button>
+    <br />
+    <button onclick="readValue(4)">4</button><button onclick="readValue(5)">5</button><button
+        onclick="readValue(6)">6</button><button onclick="readValue('-')">-</button>
+    <br />
+    <button onclick="readValue(1)">1</button><button onclick="readValue(2)">2</button><button
+        onclick="readValue(3)">3</button><button onclick="readValue('/')">/</button>
+    <br />
+    <button onclick="readValue('.')">.</button><button onclick="readValue(0)">0</button><button
+        onclick="readValue('=')">=</button><button onclick="readValue('*')">*</button>
+
+    <script>
+        let input = "";
+        function readValue(userInput) {
+
+            if(userInput=="="){
+                console.log(input)
+                let result = eval(input);
+                document.getElementById("output").innerText = result;
+            } else if(userInput=="."){
+                if(input.indexOf(".")<0){
+                    input = input + userInput;
+                } else {}
+            } else {
+                if(userInput=="+" || userInput =="-" || userInput =="/" || userInput =="*"){
+                if(input==""){
+
+                } else if(input.endsWith("+")||input.endsWith("-")||input.endsWith("/")||input.endsWith("*")){
+                    input = input.substr(0, input.length-1);
+                }
+            }
+
+            input = input + userInput;
+           
+            if(input.length==1 && (input.endsWith("+")||input.endsWith("-")||input.endsWith("/")||input.endsWith("*"))){
+                input = input.substr(0, input.length-1);
+            }
+            
+            console.log(input)
+            document.getElementById("output").innerText = input;
+            }
+        }
+
+        function clearOutput(){
+            input = "";
+            document.getElementById("output").innerText = "";
+        }
+    </script>
+</body>
+
+</html>
