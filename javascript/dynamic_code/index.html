@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements</title>
+</head>
+
+<body>
+    <select id="element">
+        <option value="p">Paragraph</option>
+        <option value="h1">Largest Heading</option>
+        <option value="span">Span Container</option>
+        <option value="div">Div Container</option>
+    </select>
+    <textarea id="text" rows="5">
+
+    </textarea>
+
+    <button onclick="display()">Create</button>
+
+    <div id="output"></div>
+
+    <script>
+        function display() {
+            let customElement = document.getElementById("element").value;
+            console.log(customElement);
+            let newElement = document.createElement(customElement);
+
+            let inputText = document.getElementById("text").value;
+            if (inputText == "") {
+
+            } else {
+                newElement.append(inputText);
+                console.log(newElement);
+                document.getElementById("output").innerText = "";
+                document.getElementById("output").appendChild(newElement);
+            }
+
+        }
+    </script>
+</body>
+
+</html>
