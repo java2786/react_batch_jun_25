@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clock</title>
+</head>
+<body>
+    <h2>Today</h2>
+    <h3>Date</h3>
+    <h3>Time</h3>
+    <script>
+        
+
+        setInterval(function(){
+            let today = new Date();
+        let day = "";
+        if(today.getDay()==0){day = "Sunday";}
+        if(today.getDay()==1){day = "Monday";}
+        if(today.getDay()==2){day = "Tuesday";}
+        if(today.getDay()==3){day = "Wednesday";}
+        if(today.getDay()==4){day = "Thursday";}
+        if(today.getDay()==5){day = "Friday";}
+        if(today.getDay()==6){day = "Saturday";}
+        document.getElementsByTagName("h2")[0].innerText = "Today: "+day;
+
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        document.getElementsByTagName("h3")[0].innerText = `Date: ${today.getDate()} / ${months[today.getMonth()]} / ${today.getFullYear()}`
+        document.getElementsByTagName("h3")[1].innerText = `Time: ${today.getHours()} : ${today.getMinutes()} : ${today.getSeconds()}`
+
+        }, 1000)
+    </script>
+</body>
+</html>
