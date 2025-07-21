@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Todo App</h1>
+    <input type="text" id="input-text" placeholder="Enter your task">
+    <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <button onclick="addTodo()">Add</button>
+    <table width="100%" border="1">
+        <thead>
+            <tr>
+                <th>CB</th>
+                <th>text</th>
+                <th>Priority</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        let todos = [
+            { task: "Dancing", priority: "low", completed: false },
+            { task: "Driving", priority: "medium", completed: false },
+            { task: "Milk", priority: "High", completed: false }
+        ]
+
+
+        function addTodo() {
+            let todoText = document.getElementById("input-text").value;
+            document.getElementById("input-text").value ="";
+            let priority = document.getElementById('priority').value;
+
+            if (todoText.length == 0) {
+                alert("todo text is empty")
+            } else {
+                // showSingleTodo(todoText, priority);
+                todos.push({task: todoText, priority: priority, completed: false});
+                showTodos();
+            }
+        }
+
+        function showSingleTodo(task, priority) {
+            let tbody = document.getElementById("tbody");
+            tbody.innerHTML = tbody.innerHTML + `
+                <tr>
+                <td><input type="checkbox"></td>
+                <td>${task}</td>
+                <td>${priority}</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+                `
+        }
+
+        function showTodos() {
+            let tbody = document.getElementById("tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < todos.length; i++) {
+                // console.log(todos[i].task);
+                let todoText = todos[i].task;
+                let priority = todos[i].priority;
+                showSingleTodo(todoText, priority);
+            }
+        }
+
+        showTodos();
+    </script>
+</body>
+
+</html>

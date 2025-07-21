@@ -13,10 +13,9 @@
         <option value="h1">Largest Heading</option>
         <option value="span">Span Container</option>
         <option value="div">Div Container</option>
+        <option value="img">Image</option>
     </select>
-    <textarea id="text" rows="5">
-
-    </textarea>
+    <textarea id="text" rows="5"></textarea>
 
     <button onclick="display()">Create</button>
 
@@ -28,15 +27,23 @@
             console.log(customElement);
             let newElement = document.createElement(customElement);
 
-            let inputText = document.getElementById("text").value;
-            if (inputText == "") {
-
+            if (customElement == "img") {
+                let imagePath = document.getElementById("text").value;
+                newElement.src = imagePath;
+                newElement.style.width = "150px"
+                console.log(newElement)
             } else {
-                newElement.append(inputText);
-                console.log(newElement);
-                document.getElementById("output").innerText = "";
-                document.getElementById("output").appendChild(newElement);
+                let inputText = document.getElementById("text").value;
+                if (inputText == "") {
+
+                } else {
+                    newElement.append(inputText);
+                    console.log(newElement);
+                }
             }
+
+            document.getElementById("output").innerText = "";
+            document.getElementById("output").appendChild(newElement);
 
         }
     </script>
