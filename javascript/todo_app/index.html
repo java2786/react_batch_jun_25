@@ -5,31 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Todo App</h1>
-    <input type="text" id="input-text" placeholder="Enter your task">
-    <select id="priority">
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-    </select>
-    <button onclick="addTodo()">Add</button>
-    <table width="100%" border="1">
-        <thead>
-            <tr>
-                <th>CB</th>
-                <th>text</th>
-                <th>Priority</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody id="tbody">
 
-        </tbody>
-    </table>
+    <section id="container">
+        <h1 id="title">Todo App</h1>
+        <div id="create-todo-container">
+            <input type="text" id="input-text" placeholder="Enter your task">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button onclick="addTodo()">Add</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>CB</th>
+                    <th>text</th>
+                    <th>Priority</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </section>
+
     <script>
         let todos = [
             { task: "Dancing", priority: "low", completed: false },
@@ -40,14 +47,14 @@
 
         function addTodo() {
             let todoText = document.getElementById("input-text").value;
-            document.getElementById("input-text").value ="";
+            document.getElementById("input-text").value = "";
             let priority = document.getElementById('priority').value;
 
             if (todoText.length == 0) {
                 alert("todo text is empty")
             } else {
                 // showSingleTodo(todoText, priority);
-                todos.push({task: todoText, priority: priority, completed: false});
+                todos.push({ task: todoText, priority: priority, completed: false });
                 showTodos();
             }
         }
