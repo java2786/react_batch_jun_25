@@ -46,7 +46,7 @@ body{
 #create-todo-container>button:hover{
     box-shadow: 4px 4px 4px gray;
     background-color: rgb(110, 20, 165);
-}    
+}
 
 #create-todo-container > input, #create-todo-container>select, #create-todo-container>button{
     border: 1px solid black;
