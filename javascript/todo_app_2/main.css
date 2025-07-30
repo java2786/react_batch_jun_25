@@ -75,6 +75,19 @@ section{
 
 }
 
+.todo > p{
+    /* background-color: rgb(234, 234, 234); */
+    color: white;
+}
+.low{
+    background-color: gray;
+}
+.medium{
+    background-color: rgb(14, 91, 14);
+}
+.high{
+    background-color: rgb(127, 46, 25);
+}
 /* mobile friendly - responsive */
 @media screen and (max-width: 800px){
     section{
