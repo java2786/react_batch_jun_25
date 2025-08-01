@@ -88,6 +88,15 @@ section{
 .high{
     background-color: rgb(127, 46, 25);
 }
+
+
+.animate{
+    /* background-color: red; */
+    transform: translateX(-100%);
+    transition-duration: 2s;
+}
+
+
 /* mobile friendly - responsive */
 @media screen and (max-width: 800px){
     section{
