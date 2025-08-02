@@ -1,0 +1,27 @@
+arrow function
+promises
+async await
+
+let func = ()=>{}
+
+function Demo(n){
+    let that = this;
+    this.name = n;
+    return [function xyz(){
+        console.log(this)
+        return this.name;
+    },
+    function abc(){
+        return this.name;
+    },
+    function demo(){
+        return that.name;
+    }]
+}
+
+let a = function(){
+    console.log(this)
+}
+let b = ()=>{
+    console.log(this)
+}

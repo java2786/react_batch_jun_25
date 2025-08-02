@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 20px);
+        }
+
+        img{
+            animation: heart-beat 2s ease infinite;
+        }
+
+        @keyframes heart-beat {
+            0%{
+                transform: scale(.8)
+            }
+            50%{
+                transform: scale(.9)
+            }
+            100%{
+                transform: scale(.8)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./heart.png" alt="">
+    </div>
+</body>
+</html>
