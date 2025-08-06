@@ -1,0 +1,14 @@
+React.js, commonly known as React, is a free and open-source front-end JavaScript library designed to make building user interfaces more efficient and seamless by using reusable components.
+
+Install node
+    - node -v 
+    - npm -v
+
+Create react project
+    - Create folder where react app will be created
+    - shift + right click = open cmd
+    - npm create vite@latest my-react-app
+    - right click on my-react-app folder - open with VSC
+	- open terminal
+	- npm i
+	- npm run dev
