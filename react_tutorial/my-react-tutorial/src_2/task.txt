@@ -1,0 +1,7 @@
+Show a variable value on browser
+Create a button
+button click should increase variable value 
+
+-------
+
+Counter App
