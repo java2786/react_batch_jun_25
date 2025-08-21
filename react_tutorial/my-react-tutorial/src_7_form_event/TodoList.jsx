@@ -12,6 +12,7 @@ function TodoList(props){
                     <tr>
                     <th>S.No.</th>
                     <th>Text</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -20,6 +21,9 @@ function TodoList(props){
                     <td>{index+1}</td>
                     {todo.completed==false && <td>{todo.text}</td>}
                     {todo.completed==true && <td><del>{todo.text}</del></td>}
+                    <td><button onClick={function(){
+                        props.deleteHandler(index)
+                    }}>Delete</button></td>
                 </tr>)
                 })}
                 </tbody>

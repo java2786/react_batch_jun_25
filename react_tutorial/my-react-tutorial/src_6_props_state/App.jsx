@@ -11,18 +11,12 @@ function App() {
         
     ]) 
 
-    function addTodo(text){
-        todos.push({text: text, completed: true})
-        console.log(todos)
-        setTodos([...todos])
-    }
+    
     return (
         <div>
             <Title title="Props & State Demo" size="36" bold="true" />
-            <TodoForm handler={addTodo} />
-            {/* <button onClick={function(){
-                addTodo("Do excercise")
-            }}>Add</button> */}
+            <TodoForm />
+            
             <TodoList todoList={todos} />
             <Footer />
         </div>
