@@ -1,0 +1,17 @@
+button{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 0px solid white;
+    font-size: 84px;
+}
+
+.middleCol{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.middleRow{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}

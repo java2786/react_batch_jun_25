@@ -1,0 +1,10 @@
+https://playtictactoe.org/
+
+step 1:
+create buttons
+
+step 2:
+button -> onClick -> X - O 
+
+step 3 -> 
+triple X or triple 0 -> Player 1 wins
