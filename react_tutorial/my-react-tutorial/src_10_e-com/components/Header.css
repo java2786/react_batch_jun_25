@@ -1,0 +1,20 @@
+/* Header -> Link  */
+
+#header{ 
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+
+span{
+    margin-top: 15px;
+}
+span > a{
+    font-size: 22px;
+    text-decoration: none;
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
